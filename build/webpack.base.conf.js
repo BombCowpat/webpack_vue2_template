@@ -40,12 +40,26 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         type: 'asset',
         generator: {
-          filename: 'img/[name].[hash:6][ext]',
+          filename: utils.assetsPath('img/[name].[hash:6][ext]'),
         },
         parser: {
           dataUrlCondition: {
             maxSize: 30 * 1024,
           },
+        },
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: utils.assetsPath('fonts/[name].[hash:6][ext]'),
+        },
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: utils.assetsPath('media/[name].[hash:6][ext]'),
         },
       },
     ],

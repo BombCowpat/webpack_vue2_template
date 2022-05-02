@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <button @click="handleClick" value="xxx">BTN</button>
+    <img src="@/assets/404.png" alt="">
   </div>
 </template>
 
