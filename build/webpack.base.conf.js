@@ -36,6 +36,18 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        type: 'asset',
+        generator: {
+          filename: 'img/[name].[hash:6][ext]',
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 30 * 1024,
+          },
+        },
+      },
     ],
   },
   plugins: [new VueLoaderPlugin()],

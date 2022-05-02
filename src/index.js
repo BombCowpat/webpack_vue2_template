@@ -1,12 +1,8 @@
-import './index.scss'
-const a = (a,b)=> {
-  console.log('index.js')
-  return a+b
-}
-console.log(a(1 + 5))
+import Vue from 'vue'
+import App from './App.vue'
 
-let p = new Promise(() => {})
+Vue.config.productionTip = false
 
-const divDom = document.createElement('div')
-divDom.classList.add('box')
-document.body.appendChild(divDom)
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
