@@ -16,3 +16,14 @@ loader是一个接受content，map，meta 三个参数的函数，使用Common J
 ### 自定义plugin
 #### plugin定义
 plugin是一个构造函数，或者一个类，类的内部要实现apply方法，接受compiler对象作为参数
+
+### 功能说明
+1. webpack5
+2. vue2,vue-router,vuex
+3. 移动端适配
+4. tailwind-css
+5. 暗黑模式
+6. i18n
+7. es-lint
+8. 高德地图
+9. 扫码
