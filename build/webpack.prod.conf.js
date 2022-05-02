@@ -7,13 +7,13 @@ const { merge } = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
 const env = require('../config/' + process.env.env_config + '.env')
-
 
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
@@ -33,7 +33,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
-      'process.env': env
+      'process.env': env,
     }),
     // extract css into its own file
     new MiniCssExtractPlugin({
@@ -52,13 +52,21 @@ const webpackConfig = merge(baseWebpackConfig, {
       minify: {
         removeComments: true,
         collapseWhitespace: true,
-        removeAttributeQuotes: true
+        removeAttributeQuotes: true,
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
-      }
+      },
       // default sort mode uses toposort which cannot handle cyclic deps
       // in certain cases, and in webpack 4, chunk order in HTML doesn't
       // matter anyway
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../static'),
+          to: config.build.assetsSubDirectory,
+        },
+      ],
     }),
   ],
 })
