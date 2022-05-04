@@ -18,9 +18,11 @@ specifiers:
   portfinder: ^1.0.28
   postcss: ^8.4.13
   postcss-loader: ^6.2.1
+  postcss-px-to-viewport: ^1.1.1
   regenerator-runtime: ^0.13.9
   rimraf: ^3.0.2
   sass-loader: ^12.6.0
+  sass-resources-loader: ^2.2.5
   script-ext-html-webpack-plugin: ^2.1.5
   semver: ^7.3.7
   serve-static: ^1.15.0
@@ -62,8 +64,10 @@ devDependencies:
   portfinder: registry.npmmirror.com/portfinder/1.0.28
   postcss: registry.npmmirror.com/postcss/8.4.13
   postcss-loader: registry.npmmirror.com/postcss-loader/6.2.1_postcss@8.4.13+webpack@5.72.0
+  postcss-px-to-viewport: registry.npmmirror.com/postcss-px-to-viewport/1.1.1
   rimraf: registry.npmmirror.com/rimraf/3.0.2
   sass-loader: registry.npmmirror.com/sass-loader/12.6.0_node-sass@7.0.1+webpack@5.72.0
+  sass-resources-loader: registry.npmmirror.com/sass-resources-loader/2.2.5
   script-ext-html-webpack-plugin: registry.npmmirror.com/script-ext-html-webpack-plugin/2.1.5_833490016f2df6f9ad47bd9073f6abad
   semver: registry.npmmirror.com/semver/7.3.7
   serve-static: registry.npmmirror.com/serve-static/1.15.0
@@ -2240,6 +2244,12 @@ packages:
     version: 2.6.4
     dependencies:
       lodash: registry.npmmirror.com/lodash/4.17.21
+    dev: true
+
+  registry.npmmirror.com/async/3.2.3:
+    resolution: {integrity: sha512-spZRyzKL5l5BZQrr/6m/SqFdBN0q3OCI0f9rjfBzCMBIP4p75P620rR3gTmaksNOhmzgdxcaxdNfMy6anrbM0g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/async/-/async-3.2.3.tgz}
+    name: async
+    version: 3.2.3
     dev: true
 
   registry.npmmirror.com/asynckit/0.4.0:
@@ -6211,6 +6221,15 @@ packages:
       postcss-value-parser: registry.npmmirror.com/postcss-value-parser/4.2.0
     dev: true
 
+  registry.npmmirror.com/postcss-px-to-viewport/1.1.1:
+    resolution: {integrity: sha512-2x9oGnBms+e0cYtBJOZdlwrFg/mLR4P1g2IFu7jYKvnqnH/HLhoKyareW2Q/x4sg0BgklHlP1qeWo2oCyPm8FQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/postcss-px-to-viewport/-/postcss-px-to-viewport-1.1.1.tgz}
+    name: postcss-px-to-viewport
+    version: 1.1.1
+    dependencies:
+      object-assign: registry.npmmirror.com/object-assign/4.1.1
+      postcss: registry.npmmirror.com/postcss/8.4.13
+    dev: true
+
   registry.npmmirror.com/postcss-reduce-initial/5.1.0_postcss@8.4.13:
     resolution: {integrity: sha512-5OgTUviz0aeH6MtBjHfbr57tml13PuedK/Ecg8szzd4XRMbYxH4572JFG067z+FqBIf6Zp/d+0581glkvvWMFw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/postcss-reduce-initial/-/postcss-reduce-initial-5.1.0.tgz}
     id: registry.npmmirror.com/postcss-reduce-initial/5.1.0
@@ -6827,6 +6846,17 @@ packages:
       neo-async: registry.npmmirror.com/neo-async/2.6.2
       node-sass: registry.npmmirror.com/node-sass/7.0.1
       webpack: registry.npmmirror.com/webpack/5.72.0_webpack-cli@4.9.2
+    dev: true
+
+  registry.npmmirror.com/sass-resources-loader/2.2.5:
+    resolution: {integrity: sha512-po8rfETH9cOQACWxubT/1CCu77KjxwRtCDm6QAXZH99aUHBydwSoxdIjC40SGp/dcS/FkSNJl0j1VEojGZqlvQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sass-resources-loader/-/sass-resources-loader-2.2.5.tgz}
+    name: sass-resources-loader
+    version: 2.2.5
+    dependencies:
+      async: registry.npmmirror.com/async/3.2.3
+      chalk: registry.npmmirror.com/chalk/4.1.2
+      glob: registry.npmmirror.com/glob/7.2.0
+      loader-utils: registry.npmmirror.com/loader-utils/2.0.2
     dev: true
 
   registry.npmmirror.com/schema-utils/1.0.0:
