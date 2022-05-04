@@ -2,8 +2,11 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <button @click="handleClick" value="xxx">BTN</button>
+    <button @click="handleClick" value="xxx">BTN1</button>
     <img src="@/assets/404.png" alt="">
+    <router-link to="/p1">p1</router-link>
+    <router-link to="/p2">p2</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
