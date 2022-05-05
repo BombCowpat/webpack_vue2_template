@@ -19,19 +19,19 @@ plugin是一个构造函数，或者一个类，类的内部要实现apply方法
 
 ### 功能说明
 1. webpack5
-   1. less scss css拆分 scss全局导入
-   2. babel
-2. vue2,vue-router,vuex
-3. 移动端适配
+2. less scss css拆分 scss全局导入(sass-resources-loader)
+3. babel
+4. vue2,vue-router,vuex
+5. 移动端适配
    1. postcss-px-to-viewport 无法转化模版的行内样式
    2. <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
    3. viewport-fit=cover 网页覆盖整个视口
    4. env() 和 constant() 获取安全区域尺寸
    5. 1px
    
-4. tailwind-css
-5. 深色模式
-6. i18n
-7. es-lint
-8. 高德地图
-9.  扫码
+6. es-lint
+7. tailwind-css
+8. 深色模式
+9. i18n
+10. 高德地图
+11. 扫码

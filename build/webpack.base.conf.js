@@ -35,6 +35,9 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        options: {
+          cacheDirectory: true // 启用缓存
+        }
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
