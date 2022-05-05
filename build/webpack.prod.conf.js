@@ -7,8 +7,10 @@ const { merge } = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -74,6 +76,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
       // `...`,
+      new TerserPlugin({}),
       new CssMinimizerPlugin(),
     ],
   },
