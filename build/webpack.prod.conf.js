@@ -73,6 +73,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
   ],
   optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
       // `...`,
