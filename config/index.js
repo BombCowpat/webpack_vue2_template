@@ -61,7 +61,7 @@ module.exports = {
      * In most cases please use '/' !!!
      */
    // assetsPublicPath: '/',
-   assetsPublicPath: '/webpack_vue2_template/dist',
+   assetsPublicPath: '/webpack_vue2_template/dist/',
 
     /**
      * Source Maps
