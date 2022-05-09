@@ -1,4 +1,11 @@
 export default [
-  { path: '/p1', component: () => import('@/views/p1/index.vue') },
-  { path: '/p2', component: () => import('@/views/p2/index.vue') }
+  {
+    path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
+    component: () => import('@/views/home/index.vue')
+  },
+  { path: '/canvas-1', component: () => import('@/views/canvas/canvas1.vue') }
 ]
