@@ -33,9 +33,10 @@ plugin是一个构造函数，或者一个类，类的内部要实现apply方法
    4. env() 和 constant() 获取安全区域尺寸
    5. 1px
    
-5. es-lint
-6. tailwind-css
-7. 深色模式
-8.  i18n
-9.  高德地图
-10. 扫码
+5. es-lint/commitizen
+6. CI/CD
+7. tailwind-css
+8. 深色模式
+9.  i18n
+10. 高德地图
+11. 扫码
