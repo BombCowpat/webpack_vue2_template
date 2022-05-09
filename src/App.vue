@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <button @click="handleClick" value="xxx">BTN1</button>
-    <img src="@/assets/404.png" alt="">
+    <img src="@/assets/404.png" alt="" />
     <router-link to="/p1">p1</router-link>
     <router-link to="/p2">p2</router-link>
     <router-view></router-view>
@@ -23,7 +23,7 @@ export default {
   methods: {
     handleClick() {
       this.$destroy()
-    },
+    }
   },
   beforeCreate() {
     console.log('father beforeCreated')
@@ -69,6 +69,6 @@ export default {
   height: 100px;
   background-color: #bfa;
   margin: 20px auto;
-  @include thinBorder((bottom,left,right,top));
+  @include thinBorder((bottom, left, right, top));
 }
 </style>

@@ -35,6 +35,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     port: PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
     proxy: config.dev.proxyTable,
+    client: {
+      progress: true,
+    },
   },
   plugins: [
     new webpack.DefinePlugin({
