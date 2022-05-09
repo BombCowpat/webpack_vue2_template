@@ -9,7 +9,8 @@
     "build:prod": "cross-env NODE_ENV=production env_config=prod npm_config_preview=true node build/build.js",
     "build:sit": "cross-env NODE_ENV=production env_config=sit node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "lint-staged": {
     "*.{vue,js,ts}": "eslint --fix"
@@ -20,14 +21,18 @@
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
     "babel-loader": "^8.2.5",
     "babel-plugin-lodash": "^3.3.4",
     "chalk": "4.1.2",
+    "commitizen": "^4.2.4",
     "connect": "^3.7.0",
     "copy-webpack-plugin": "^10.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -75,5 +80,10 @@
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
