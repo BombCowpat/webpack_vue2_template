@@ -7,6 +7,8 @@ const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const baseWebpackConfig = require('./webpack.base.conf')
 const portfinder = require('portfinder')
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -18,6 +20,9 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
+  // 关闭开发模式时构建信息的输出 https://webpack.docschina.org/configuration/stats/
+  // 或者在npm script 加上 --no-stats
+  stats: 'errors-only',
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.dev.cssSourceMap,
@@ -38,6 +43,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     client: {
       progress: true,
     },
+    // quiet: true,
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -55,6 +61,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         BASE_URL: config.dev.assetsPublicPath + config.dev.assetsSubDirectory,
       },
     }),
+    new FriendlyErrorsWebpackPlugin(),
   ]
 })
 

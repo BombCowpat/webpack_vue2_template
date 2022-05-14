@@ -34,13 +34,6 @@ plugin是一个构造函数，或者一个类，类的内部要实现apply方法
    5. 1px
    
 5. es-lint/commitizen
-6. 单元测试
-7. CI/CD
-8. tailwind-css
-9. 深色模式
-10. i18n
-11. 高德地图
-12. 扫码
-13. https://juejin.cn/post/6951649464637636622#heading-39
-14. https://juejin.cn/post/6887751398499287054
-15. https://juejin.cn/post/6887751398499287054
+6.  https://juejin.cn/post/6951649464637636622#heading-39
+7.  https://juejin.cn/post/6887751398499287054
+8.  https://juejin.cn/post/6887751398499287054
