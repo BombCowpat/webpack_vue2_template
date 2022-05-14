@@ -7,7 +7,6 @@ const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const baseWebpackConfig = require('./webpack.base.conf')
 const portfinder = require('portfinder')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 
 function resolve(dir) {
@@ -20,9 +19,8 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
-  // 关闭开发模式时构建信息的输出 https://webpack.docschina.org/configuration/stats/
-  // 或者在npm script 加上 --no-stats
-  stats: 'errors-only',
+  //stats 选项让你更精确地控制 bundle 信息该怎么显示 https://webpack.docschina.org/configuration/stats/
+  stats: 'summary',
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.dev.cssSourceMap,
@@ -40,16 +38,16 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     port: PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
     proxy: config.dev.proxyTable,
+    // 浏览器控制台信息控制
     client: {
-      progress: true,
+      // progress: true, // 浏览器编译进度显示
+      logging: 'none', // 关闭浏览器控制台的信息
     },
-    // quiet: true,
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
     }),
-    new webpack.HotModuleReplacementPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -61,7 +59,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         BASE_URL: config.dev.assetsPublicPath + config.dev.assetsSubDirectory,
       },
     }),
-    new FriendlyErrorsWebpackPlugin(),
   ]
 })
 
