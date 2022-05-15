@@ -9,7 +9,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:3000',
+        pathRewrite: { '^/api': '' },
+        changeOrigin: true, // 后台收到的请求的域名会被改为targe的域名
+        logLevel: 'debug',
+      }
+    },
 
     // Various Dev Server settings
 
@@ -60,8 +67,8 @@ module.exports = {
      * then assetsPublicPath should be set to "/bar/".
      * In most cases please use '/' !!!
      */
-   // assetsPublicPath: '/',
-   assetsPublicPath: '/webpack_vue2_template/dist/',
+    // assetsPublicPath: '/',
+    assetsPublicPath: '/webpack_vue2_template/dist/',
 
     /**
      * Source Maps
