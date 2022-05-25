@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebpack_vue2_template=self.webpackChunkwebpack_vue2_template||[]).push([[398],{398:function(e,t,n){n.r(t),n.d(t,{default:function(){return a}});var u={name:"p1-1"},a=(0,n(4630).Z)(u,(function(){var e=this,t=e.$createElement;return(e._self._c||t)("div",[e._v("p1")])}),[],!1,null,"769591d4",null).exports}}]);
