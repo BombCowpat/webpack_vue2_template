@@ -5,6 +5,7 @@ specifiers:
   '@babel/preset-env': ^7.17.10
   '@commitlint/cli': ^16.2.4
   '@commitlint/config-conventional': ^16.2.4
+  archiver: ^5.3.1
   axios: ^0.27.2
   babel-loader: ^8.2.5
   babel-plugin-lodash: ^3.3.4
@@ -72,6 +73,7 @@ devDependencies:
   '@babel/preset-env': registry.npmmirror.com/@babel/preset-env/7.17.10_@babel+core@7.17.10
   '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/16.2.4
   '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/16.2.4
+  archiver: registry.npmmirror.com/archiver/5.3.1
   babel-loader: registry.npmmirror.com/babel-loader/8.2.5_887a5110397f957d9e06dd05497793db
   babel-plugin-lodash: registry.npmmirror.com/babel-plugin-lodash/3.3.4
   chalk: registry.npmmirror.com/chalk/4.1.2
@@ -2568,6 +2570,39 @@ packages:
     version: 2.0.0
     dev: true
 
+  registry.npmmirror.com/archiver-utils/2.1.0:
+    resolution: {integrity: sha512-bEL/yUb/fNNiNTuUz979Z0Yg5L+LzLxGJz8x79lYmR54fmTIb6ob/hNQgkQnIUDWIFjZVQwl9Xs356I6BAMHfw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/archiver-utils/-/archiver-utils-2.1.0.tgz}
+    name: archiver-utils
+    version: 2.1.0
+    engines: {node: '>= 6'}
+    dependencies:
+      glob: registry.npmmirror.com/glob/7.2.0
+      graceful-fs: registry.npmmirror.com/graceful-fs/4.2.10
+      lazystream: registry.npmmirror.com/lazystream/1.0.1
+      lodash.defaults: registry.npmmirror.com/lodash.defaults/4.2.0
+      lodash.difference: registry.npmmirror.com/lodash.difference/4.5.0
+      lodash.flatten: registry.npmmirror.com/lodash.flatten/4.4.0
+      lodash.isplainobject: registry.npmmirror.com/lodash.isplainobject/4.0.6
+      lodash.union: registry.npmmirror.com/lodash.union/4.6.0
+      normalize-path: registry.npmmirror.com/normalize-path/3.0.0
+      readable-stream: registry.npmmirror.com/readable-stream/2.3.7
+    dev: true
+
+  registry.npmmirror.com/archiver/5.3.1:
+    resolution: {integrity: sha512-8KyabkmbYrH+9ibcTScQ1xCJC/CGcugdVIwB+53f5sZziXgwUh3iXlAlANMxcZyDEfTHMe6+Z5FofV8nopXP7w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/archiver/-/archiver-5.3.1.tgz}
+    name: archiver
+    version: 5.3.1
+    engines: {node: '>= 10'}
+    dependencies:
+      archiver-utils: registry.npmmirror.com/archiver-utils/2.1.0
+      async: registry.npmmirror.com/async/3.2.3
+      buffer-crc32: registry.npmmirror.com/buffer-crc32/0.2.13
+      readable-stream: registry.npmmirror.com/readable-stream/3.6.0
+      readdir-glob: registry.npmmirror.com/readdir-glob/1.1.1
+      tar-stream: registry.npmmirror.com/tar-stream/2.2.0
+      zip-stream: registry.npmmirror.com/zip-stream/4.1.0
+    dev: true
+
   registry.npmmirror.com/are-we-there-yet/2.0.0:
     resolution: {integrity: sha512-Ci/qENmwHnsYo9xKIcUJN5LeDKdJ6R1Z1j9V/J5wyq8nh/mYPEpIKJbBZXtZjG04HiK7zV/p6Vs9952MrMeUIw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/are-we-there-yet/-/are-we-there-yet-2.0.0.tgz}
     name: are-we-there-yet
@@ -2953,6 +2988,12 @@ packages:
       escalade: registry.npmmirror.com/escalade/3.1.1
       node-releases: registry.npmmirror.com/node-releases/2.0.3
       picocolors: registry.npmmirror.com/picocolors/1.0.0
+    dev: true
+
+  registry.npmmirror.com/buffer-crc32/0.2.13:
+    resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz}
+    name: buffer-crc32
+    version: 0.2.13
     dev: true
 
   registry.npmmirror.com/buffer-from/1.1.2:
@@ -3387,6 +3428,18 @@ packages:
       dot-prop: registry.npmmirror.com/dot-prop/5.3.0
     dev: true
 
+  registry.npmmirror.com/compress-commons/4.1.1:
+    resolution: {integrity: sha512-QLdDLCKNV2dtoTorqgxngQCMA+gWXkM/Nwu7FpeBhk/RdkzimqC3jueb/FDmaZeXh+uby1jkBqE3xArsLBE5wQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/compress-commons/-/compress-commons-4.1.1.tgz}
+    name: compress-commons
+    version: 4.1.1
+    engines: {node: '>= 10'}
+    dependencies:
+      buffer-crc32: registry.npmmirror.com/buffer-crc32/0.2.13
+      crc32-stream: registry.npmmirror.com/crc32-stream/4.0.2
+      normalize-path: registry.npmmirror.com/normalize-path/3.0.0
+      readable-stream: registry.npmmirror.com/readable-stream/3.6.0
+    dev: true
+
   registry.npmmirror.com/compressible/2.0.18:
     resolution: {integrity: sha512-AF3r7P5dWxL8MxyITRMlORQNaOA2IkAFaTr4k7BUumjPtRpGDTZpl0Pb1XCO6JeDCBdp126Cgs9sMxqSjgYyRg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/compressible/-/compressible-2.0.18.tgz}
     name: compressible
@@ -3636,6 +3689,24 @@ packages:
       parse-json: registry.npmmirror.com/parse-json/5.2.0
       path-type: registry.npmmirror.com/path-type/4.0.0
       yaml: registry.npmmirror.com/yaml/1.10.2
+    dev: true
+
+  registry.npmmirror.com/crc-32/1.2.2:
+    resolution: {integrity: sha512-ROmzCKrTnOwybPcJApAA6WBWij23HVfGVNKqqrZpuyZOHqK2CwHSvpGuyt/UNNvaIjEd8X5IFGp4Mh+Ie1IHJQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/crc-32/-/crc-32-1.2.2.tgz}
+    name: crc-32
+    version: 1.2.2
+    engines: {node: '>=0.8'}
+    hasBin: true
+    dev: true
+
+  registry.npmmirror.com/crc32-stream/4.0.2:
+    resolution: {integrity: sha512-DxFZ/Hk473b/muq1VJ///PMNLj0ZMnzye9thBpmjpJKCc5eMgB95aK8zCGrGfQ90cWo561Te6HK9D+j4KPdM6w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/crc32-stream/-/crc32-stream-4.0.2.tgz}
+    name: crc32-stream
+    version: 4.0.2
+    engines: {node: '>= 10'}
+    dependencies:
+      crc-32: registry.npmmirror.com/crc-32/1.2.2
+      readable-stream: registry.npmmirror.com/readable-stream/3.6.0
     dev: true
 
   registry.npmmirror.com/create-require/1.1.1:
@@ -5130,6 +5201,12 @@ packages:
       readable-stream: registry.npmmirror.com/readable-stream/2.3.7
     dev: true
 
+  registry.npmmirror.com/fs-constants/1.0.0:
+    resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fs-constants/-/fs-constants-1.0.0.tgz}
+    name: fs-constants
+    version: 1.0.0
+    dev: true
+
   registry.npmmirror.com/fs-extra/10.1.0:
     resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fs-extra/-/fs-extra-10.1.0.tgz}
     name: fs-extra
@@ -6477,6 +6554,15 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
+  registry.npmmirror.com/lazystream/1.0.1:
+    resolution: {integrity: sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lazystream/-/lazystream-1.0.1.tgz}
+    name: lazystream
+    version: 1.0.1
+    engines: {node: '>= 0.6.3'}
+    dependencies:
+      readable-stream: registry.npmmirror.com/readable-stream/2.3.7
+    dev: true
+
   registry.npmmirror.com/levn/0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/levn/-/levn-0.4.1.tgz}
     name: levn
@@ -6626,6 +6712,30 @@ packages:
     version: 4.0.8
     dev: true
 
+  registry.npmmirror.com/lodash.defaults/4.2.0:
+    resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz}
+    name: lodash.defaults
+    version: 4.2.0
+    dev: true
+
+  registry.npmmirror.com/lodash.difference/4.5.0:
+    resolution: {integrity: sha512-dS2j+W26TQ7taQBGN8Lbbq04ssV3emRw4NY58WErlTO29pIqS0HmoT5aJ9+TUQ1N3G+JOZSji4eugsWwGp9yPA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.difference/-/lodash.difference-4.5.0.tgz}
+    name: lodash.difference
+    version: 4.5.0
+    dev: true
+
+  registry.npmmirror.com/lodash.flatten/4.4.0:
+    resolution: {integrity: sha512-C5N2Z3DgnnKr0LOpv/hKCgKdb7ZZwafIrsesve6lmzvZIRZRGaZ/l6Q8+2W7NaT+ZwO3fFlSCzCzrDCFdJfZ4g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz}
+    name: lodash.flatten
+    version: 4.4.0
+    dev: true
+
+  registry.npmmirror.com/lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz}
+    name: lodash.isplainobject
+    version: 4.0.6
+    dev: true
+
   registry.npmmirror.com/lodash.map/4.6.0:
     resolution: {integrity: sha512-worNHGKLDetmcEYDvh2stPCrrQRkP20E4l0iIS7F8EvzMqBBi7ltvFN5m1HvTf1P7Jk1txKhvFcmYsCr8O2F1Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.map/-/lodash.map-4.6.0.tgz}
     name: lodash.map
@@ -6642,6 +6752,12 @@ packages:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.merge/-/lodash.merge-4.6.2.tgz}
     name: lodash.merge
     version: 4.6.2
+    dev: true
+
+  registry.npmmirror.com/lodash.union/4.6.0:
+    resolution: {integrity: sha512-c4pB2CdGrGdjMKYLA+XiRDO7Y0PRQbm/Gzg8qMj+QH+pFVAoTp5sBpO0odL3FjoPCGjK96p6qsP+yQoiLoOBcw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.union/-/lodash.union-4.6.0.tgz}
+    name: lodash.union
+    version: 4.6.0
     dev: true
 
   registry.npmmirror.com/lodash.uniq/4.5.0:
@@ -8496,6 +8612,14 @@ packages:
       util-deprecate: registry.npmmirror.com/util-deprecate/1.0.2
     dev: true
 
+  registry.npmmirror.com/readdir-glob/1.1.1:
+    resolution: {integrity: sha512-91/k1EzZwDx6HbERR+zucygRFfiPl2zkIYZtv3Jjr6Mn7SkKcVct8aVO+sSRiGMc6fLf72du3d92/uY63YPdEA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/readdir-glob/-/readdir-glob-1.1.1.tgz}
+    name: readdir-glob
+    version: 1.1.1
+    dependencies:
+      minimatch: registry.npmmirror.com/minimatch/3.1.2
+    dev: true
+
   registry.npmmirror.com/readdirp/3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/readdirp/-/readdirp-3.6.0.tgz}
     name: readdirp
@@ -9659,6 +9783,19 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  registry.npmmirror.com/tar-stream/2.2.0:
+    resolution: {integrity: sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tar-stream/-/tar-stream-2.2.0.tgz}
+    name: tar-stream
+    version: 2.2.0
+    engines: {node: '>=6'}
+    dependencies:
+      bl: registry.npmmirror.com/bl/4.1.0
+      end-of-stream: registry.npmmirror.com/end-of-stream/1.4.4
+      fs-constants: registry.npmmirror.com/fs-constants/1.0.0
+      inherits: registry.npmmirror.com/inherits/2.0.4
+      readable-stream: registry.npmmirror.com/readable-stream/3.6.0
+    dev: true
+
   registry.npmmirror.com/tar/6.1.11:
     resolution: {integrity: sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tar/-/tar-6.1.11.tgz}
     name: tar
@@ -10651,4 +10788,15 @@ packages:
     name: yocto-queue
     version: 0.1.0
     engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/zip-stream/4.1.0:
+    resolution: {integrity: sha512-zshzwQW7gG7hjpBlgeQP9RuyPGNxvJdzR8SUM3QhxCnLjWN2E7j3dOvpeDcQoETfHx0urRS7EtmVToql7YpU4A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zip-stream/-/zip-stream-4.1.0.tgz}
+    name: zip-stream
+    version: 4.1.0
+    engines: {node: '>= 10'}
+    dependencies:
+      archiver-utils: registry.npmmirror.com/archiver-utils/2.1.0
+      compress-commons: registry.npmmirror.com/compress-commons/4.1.1
+      readable-stream: registry.npmmirror.com/readable-stream/3.6.0
     dev: true
