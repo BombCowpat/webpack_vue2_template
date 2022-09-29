@@ -52,7 +52,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/,
         type: 'asset',
         generator: {
           filename: utils.assetsPath('img/[name].[hash:8][ext]')
