@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebpack_vue2_template=self.webpackChunkwebpack_vue2_template||[]).push([[745],{4745:function(e,a,n){n.r(a),n.d(a,{default:function(){return u}});var t={name:"canvas-1"},u=(0,n(4630).Z)(t,(function(){var e=this,a=e.$createElement;return(e._self._c||a)("div",[e._v("canvas11")])}),[],!1,null,"4c52a7a2",null).exports}}]);

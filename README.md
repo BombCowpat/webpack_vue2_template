@@ -37,3 +37,7 @@ plugin是一个构造函数，或者一个类，类的内部要实现apply方法
 6.  https://juejin.cn/post/6951649464637636622#heading-39
 7.  https://juejin.cn/post/6887751398499287054
 8.  https://juejin.cn/post/6887751398499287054
+9.  使用swc替代babel 
+    1. 不转化 2964 ms
+    2. swc 2985 ms
+    3. babel 5460 ms
